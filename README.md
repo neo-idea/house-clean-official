@@ -1,8 +1,10 @@
 # house-clean-official
 
-Mac House Clean 官网（静态站，托管于 GitHub Pages）。
+Mac House Clean 官网（静态站，托管于 GitHub Pages，中文 + English 双语）。
 
-- 站点：https://house-clean.zpad.app
+- 中文：https://house-clean.zpad.app/ （`index.html` / `privacy.html`）
+- English：https://house-clean.zpad.app/en/ （`en/index.html` / `en/privacy.html`，资源相对引用 `../assets/`）
+- 双语互链（导航与页脚），已配 hreflang（zh-CN / en / x-default→zh）
 - 归属仓库：neo-idea/house-clean-official（public，仅静态文件；App 源码在私有仓库 neo-idea/mac-house-clean）
 
 ## 部署
