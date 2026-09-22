@@ -10,6 +10,17 @@
 <link rel="alternate" hreflang="zh-CN" href="https://house-clean.zpad.app/">
 <link rel="alternate" hreflang="en" href="https://house-clean.zpad.app/en/">
 <link rel="alternate" hreflang="x-default" href="https://house-clean.zpad.app/">
+<script>
+(function () {
+  try {
+    if (sessionStorage.getItem("mhc-lang")) return;
+    var langs = (navigator.languages && navigator.languages.length)
+      ? navigator.languages : [navigator.language || "en"];
+    var isZh = langs.some(function (l) { return /^zh/i.test(l || ""); });
+    if (isZh) location.replace("../" + location.search + location.hash);
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 
@@ -24,7 +35,7 @@
     <a href="#safety">Safety</a>
     <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
-    <a href="../">中文</a>
+    <a href="../" onclick="try{sessionStorage.setItem('mhc-lang','1')}catch(e){}">中文</a>
   </div>
   <a class="btn btn-primary btn-sm" href="#pricing">Get the App</a>
 </nav>
@@ -46,7 +57,7 @@
       </span>
     </div>
     <figure class="hero-shot">
-      <img src="../assets/01-dashboard.jpg" alt="Mac House Clean main window: a central ring gauge showing disk usage and cleanable space" width="1440" height="900" loading="eager">
+      <img src="../assets/en/01-dashboard.jpg" alt="Mac House Clean main window: a central ring gauge showing disk usage and cleanable space" width="1440" height="900" loading="eager">
     </figure>
   </div>
 </header>
@@ -97,10 +108,10 @@
     <h2>Take a look</h2>
     <p class="section-sub">Real interface, straight from the app.</p>
     <div class="shots">
-      <figure class="shot"><img src="../assets/02-clean-plan.jpg" alt="Clean plan: cleanable items and sizes grouped by category" loading="lazy"></figure>
-      <figure class="shot"><img src="../assets/05-duplicates.jpg" alt="Duplicates: byte-verified grouped list" loading="lazy"></figure>
-      <figure class="shot"><img src="../assets/06-uninstaller.jpg" alt="Uninstaller: app list with leftover-file preview" loading="lazy"></figure>
-      <figure class="shot"><img src="../assets/07-startup-items.jpg" alt="Startup items: launch-service toggles" loading="lazy"></figure>
+      <figure class="shot"><img src="../assets/en/02-clean-plan.jpg" alt="Clean plan: cleanable items and sizes grouped by category" loading="lazy"></figure>
+      <figure class="shot"><img src="../assets/en/05-duplicates.jpg" alt="Duplicates: byte-verified grouped list" loading="lazy"></figure>
+      <figure class="shot"><img src="../assets/en/06-uninstaller.jpg" alt="Uninstaller: app list with leftover-file preview" loading="lazy"></figure>
+      <figure class="shot"><img src="../assets/en/07-startup-items.jpg" alt="Startup items: launch-service toggles" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -197,7 +208,7 @@
     </div>
     <div class="footer-links">
       <a href="privacy.html">Privacy</a>
-      <a href="../">中文</a>
+      <a href="../" onclick="try{sessionStorage.setItem('mhc-lang','1')}catch(e){}">中文</a>
       <!-- TODO(contact): replace with the real support email -->
       <a href="mailto:support@zpad.app">Contact</a>
     </div>
