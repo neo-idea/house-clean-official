@@ -1,9 +1,9 @@
-# house-clean-site
+# house-clean-official
 
 Mac House Clean 官网（静态站，托管于 GitHub Pages）。
 
 - 站点：https://house-clean.zpad.app
-- 归属仓库：pekaboo/house-clean-site（public，仅静态文件；App 源码在私有仓库 pekaboo/mac-house-clean）
+- 归属仓库：neo-idea/house-clean-official（public，仅静态文件；App 源码在私有仓库 neo-idea/mac-house-clean）
 
 ## 部署
 
@@ -11,11 +11,11 @@ Mac House Clean 官网（静态站，托管于 GitHub Pages）。
 
 ## 自定义域名（一次性）
 
-DNS 在 `zpad.app` 的解析商处添加：
+DNS 在 `zpad.app` 的解析商（Cloudflare）处添加：
 
 ```
 类型   主机名            值
-CNAME  house-clean      pekaboo.github.io
+CNAME  house-clean      neo-idea.github.io
 ```
 
 GitHub 仓库 Settings → Pages → Custom domain 已由 `CNAME` 文件声明为
